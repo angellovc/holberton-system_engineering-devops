@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod --preserve-root ugoa+x ./
+chmod -R --preserve-root ugoa+x ./
