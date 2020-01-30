@@ -1,2 +1,2 @@
-0 string\HOLBERTON thisisanholbertonfile
-!:mime MIMETYPE
+0 string HOLBERTON thisisanholbertonfile 
+!:mime text/x-0
