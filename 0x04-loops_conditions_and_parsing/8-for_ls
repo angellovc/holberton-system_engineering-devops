@@ -3,8 +3,8 @@
 #after the first dash is displayed
 
 
-i=$(ls | cut -d "-" -f2)
-for x in $i
+
+for i in *
 do
-	echo "$x"
+	echo "$i" | cut -d "-" -f2
 done
