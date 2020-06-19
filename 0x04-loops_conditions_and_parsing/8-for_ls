@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#print the contect of current directory
+#after the first dash is displayed
+
+
+i=$(find . -name "[!.]*" | cut -d "-" -f2)
+for x in $i
+do
+	echo "$x"
+done
