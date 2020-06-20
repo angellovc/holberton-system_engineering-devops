@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#ip filter to apache-access.log file and get the occurrences number
+
+awk '{print $1 " " $9}' apache-access.log |  sort | uniq -c | sort -nr
