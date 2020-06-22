@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-#this is an infinite loop with signal handler
+#print a quote infinately
+#make a new file storing his own PID
+#use signal handler to get exit clean
+#the correct way to leave is using SIGQUIT to quit the file an delete file
 
 
 touch /var/run/holbertonscript.pid
