@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#this is an infinite loop with signal handler
+
+
+touch /var/run/holbertonscript.pid
+echo $$ > /var/run/holbertonscript.pid
+
+_term() 
+{ 
+	rm /var/run/holbertonscript.pid
+	echo "I hate the kill command"
+}
+trap _term SIGTERM
+
+_int() 
+{ 
+	echo "Y U no love me?!" 
+}
+trap _int SIGINT
+
+
+_quit() 
+{
+	rm /var/run/holbertonscript.pid
+	exit
+}
+trap _quit SIGQUIT
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+
+done
+
+
+
+
