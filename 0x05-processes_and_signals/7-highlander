@@ -2,6 +2,7 @@
 
 _term() { 
   echo "I am invincible!!!" 
+  kill -TERM "$child" 2>/dev/null
 }
 
 trap _term SIGTERM
@@ -10,5 +11,5 @@ while true
 do
 	echo "To infinity and beyond"
 	sleep 2
-done
 
+done
