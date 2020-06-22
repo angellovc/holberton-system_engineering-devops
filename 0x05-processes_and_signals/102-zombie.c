@@ -23,14 +23,13 @@ int main(void)
 	int i = 0;
 	pid_t pid = 1;
 
-	if (pid != 0)
-		while (i < 5)
-		{
-			pid = fork();
-			if (pid < 1)
-				return (0);
-				printf("Zombie process created, PID: %i\n", pid);
-			i++;
-		}
-		infinite_while();
+	while (i < 5)
+	{
+		pid = fork();
+		if (pid < 1)
+			return (0);
+		printf("Zombie process created, PID: %i\n", pid);
+		i++;
+	}
+	infinite_while();
 }
