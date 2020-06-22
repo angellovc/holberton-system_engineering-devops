@@ -32,4 +32,5 @@ int main(void)
 		i++;
 	}
 	infinite_while();
+	return (0);
 }
