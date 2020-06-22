@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#print all the process hirerachicaly
+
+ps -auxf
