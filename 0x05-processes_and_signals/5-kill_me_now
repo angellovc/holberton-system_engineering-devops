@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #kill process in terminal 0
 
-kill "$(pgrep -t pts/0)"
+process=$(pgrep -f "bash ./4-to_infinity_and_beyond")
+kill "$process"
