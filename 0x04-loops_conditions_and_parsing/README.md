@@ -7,7 +7,7 @@ Read or watch:
 * [Comparison operators](https://intranet.hbtn.io/rltoken/jN0bfG-Qpkg3aYJM-n3LHw)
 * [File test operators](https://intranet.hbtn.io/rltoken/mYWUvI1VFqR_KWNWZngq7Q)
 * [Make your scripts portable](https://intranet.hbtn.io/rltoken/Dyrnap2UC-LrzrmCOJRx8A)
-
+* [Manage your apache log files with awk](https://www.the-art-of-web.com/system/logs/)
 ---
 ## Learning Objectives:bulb:
 What you should learn from this project:
