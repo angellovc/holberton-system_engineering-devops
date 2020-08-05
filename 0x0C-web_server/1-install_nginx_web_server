@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Update information
+# Install nginx
+# Nginx listen to port 80
+
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+/etc/init.d/nginx restart
