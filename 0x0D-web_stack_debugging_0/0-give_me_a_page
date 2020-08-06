@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #install an apache server and start it
 
-apt-get install -y apache2
-/etc/init.d/apache2 restart
+docker exec -i 14d802bba3fb apt-get -y update
+docker exec -i 14d802bba3fb apt-get install -y apache2
+docker exec -i 14d802bba3fb /etc/init.d/apache2 restart
