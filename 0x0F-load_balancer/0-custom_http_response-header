@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 #Configure Nginx so that its HTTP response contains a custom header
-host_name=$(hostnamectl | grep "Static hostname:" | awk '{print $3}')
-sed -i "46i         add_header X-Served-By $host_name;" /etc/nginx/sites-available/default
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page
+" > /var/www/html/404.html
+sed -i "46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+sed -i "46i error_page 404 /404.html;" /etc/nginx/sites-available/default
+sed -i "46i add_header X-Served-By $hostname;" /etc/nginx/sites-available/default
 /etc/init.d/nginx restart
