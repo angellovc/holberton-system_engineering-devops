@@ -18,3 +18,4 @@ backend web_servers
     server 1599-web-01 35.231.105.155:80 check
     server 1599-web-02 34.75.216.134:80 check
 " >> /etc/haproxy/haproxy.cfg
+/etc/service/haproxy restart
