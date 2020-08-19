@@ -22,8 +22,8 @@ elif [ "$2" ]
 then
     get_domains "$1" "$2"
 else
+    get_domains "$1" "${subdomains[3]}"
+    get_domains "$1" "${subdomains[2]}"
     get_domains "$1" "${subdomains[0]}"
     get_domains "$1" "${subdomains[1]}"
-    get_domains "$1" "${subdomains[2]}"
-    get_domains "$1" "${subdomains[3]}"
 fi
