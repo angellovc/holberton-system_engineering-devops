@@ -14,12 +14,11 @@ get_domains() {
 }
 
 subdomains=("web-01" "web-02" "lb-01" "www")
-echo "$#"
 
 if [ -z "$1" ]
 then
     exit
-elif [ "$2" ] && [[ "${subdomains[@]} " =~ "$2" ]]
+elif [ "$2" ]
 then
     get_domains "$1" "$2"
 else
