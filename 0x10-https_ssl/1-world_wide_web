@@ -15,7 +15,7 @@ get_domains() {
 
 subdomains=("web-01" "web-02" "lb-01" "www")
 
-if [ -z "$1" ]
+if [ ! "$1" ]
 then
     exit
 elif [ "$2" ]
