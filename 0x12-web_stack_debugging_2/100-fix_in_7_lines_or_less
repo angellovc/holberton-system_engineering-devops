@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #run nginx as non root
-pkill apache2 nginx
+pkill apache2
 chown nginx:nginx /etc/nginx/nginx.conf
 chmod 700 /etc/nginx/nginx.conf
 sed -i -E 's/listen(.*)80(.*);/listen\18080\2;/g' /etc/nginx/sites-available/default
