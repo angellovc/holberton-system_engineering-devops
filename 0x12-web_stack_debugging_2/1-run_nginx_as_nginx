@@ -3,6 +3,7 @@
 sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' /etc/nginx/sites-enabled/default
 sed -i 's/listen [::]:80 default_server ipv6only=on;/listen [::]:8080 default_server ipv6only=on;/g' /etc/nginx/sites-enabled/default       
 pkill apache2
+pkill nginx
 chown nginx:nginx /etc/nginx/nginx.conf
-chmod 400 /etc/nginx/nginx.conf
+chmod 700 /etc/nginx/nginx.conf
 sudo -u nginx /etc/init.d/nginx restart
