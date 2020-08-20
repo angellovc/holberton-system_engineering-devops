@@ -6,7 +6,9 @@ Read or watch:
 * [What are the 2 main elements that SSL is providing](https://intranet.hbtn.io/rltoken/jXCB9Hn-ALcP78kPMHtnSA)
 * [HAProxy SSL termination on Ubuntu16.04](https://intranet.hbtn.io/rltoken/UkbvWfKF6ZAY_CUvlM32lA)
 * [SSL termination](https://intranet.hbtn.io/rltoken/VFq2MQ9qHXw2Nb11tnWF6Q)
-* [Bash function](https://intranet.hbtn.io/rltoken/v4PUYiN5CxhYKSycYaVvLw)
+* [Certbot install](https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx)
+* [HaProxy setup](https://www.haproxy.com/blog/haproxy-ssl-termination/#:~:text=The%20HAProxy%20load%20balancer%20provides,decrypt%20traffic%20as%20it%20passes)
+* [Link certbot with Haproxy](https://serversforhackers.com/c/letsencrypt-with-haproxy)
 
 ---
 ## Learning Objectives:bulb:
@@ -29,6 +31,10 @@ Let’s also add other subdomains to make our life easier, and write a Bash scri
 
 ### [2. HAproxy SSL termination](./2-haproxy_ssl_termination)
 * “Terminating SSL on HAproxy” means that HAproxy is configured to handle encrypted traffic, unencrypt it and pass it on to its destination.
+
+
+### [3. No loophole in your website traffic](./100-redirect_http_to_https)
+* A good habit is to enforce HTTPS traffic so that no unencrypted traffic is possible. Configure HAproxy to automatically redirect HTTP traffic to HTTPS.
 
 ---
 
