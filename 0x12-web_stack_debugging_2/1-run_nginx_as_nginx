@@ -6,4 +6,4 @@ pkill apache2
 pkill nginx
 chown nginx:nginx /etc/nginx/nginx.conf
 chmod 700 /etc/nginx/nginx.conf
-sudo -u nginx /etc/init.d/nginx restart
+sudo -u nginx /etc/init.d/nginx start
