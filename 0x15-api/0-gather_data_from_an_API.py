@@ -7,9 +7,9 @@ from sys import argv
 r = requests.get('https://jsonplaceholder.typicode.com/users')
 users = r.json()
 for user in users:
-    if user['id'] == int(argv[1]):
-        user_name = user['name']
-        user_id = user['id']
+    if user.get('id') == int(argv[1]):
+        user_name = user.get('name')
+        user_id = user.get('id')
         break
 
 r = requests.get('https://jsonplaceholder.typicode.com/todos')
@@ -20,11 +20,11 @@ completed = 0
 tasks = []
 
 for todo in todos:
-    if todo['userId'] == user_id:
+    if todo.get('userId') == user_id:
         total_tasks += 1
-        if todo['completed'] is True:
+        if todo.get('completed') is True:
             completed += 1
-            tasks.append(todo['title'])
+            tasks.append(todo.get('title'))
 
 print("Employee {} is done with tasks({}/{}):".format(
     user_name,
