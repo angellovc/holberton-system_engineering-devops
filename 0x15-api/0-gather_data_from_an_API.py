@@ -32,4 +32,4 @@ print("Employee {} is done with tasks({}/{}):".format(
     total_tasks)
 )
 for task in tasks:
-    print("    "+task)
+    print("     "+task)
