@@ -17,9 +17,9 @@ if __name__ == "__main__":
     r = requests.get('https://jsonplaceholder.typicode.com/todos')
     todos = r.json()
     csv_file = str(user_id)+".csv"
+
     with open(csv_file, mode='w', encoding="UTF8") as csv_file:
-        fieldnames = ['emp_name', 'dept', 'birth_month']
-        writer = csv.writer(csv_file)
+        writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
         for todo in todos:
             if todo.get('userId') == user_id:
                 writer.writerow([
