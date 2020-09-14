@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ returns information about his/her TODO list progress """
-from sys import argv
 import requests
+from sys import argv
 
 
 r = requests.get('https://jsonplaceholder.typicode.com/users')
