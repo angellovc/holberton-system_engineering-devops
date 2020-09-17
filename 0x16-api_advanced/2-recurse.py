@@ -14,13 +14,14 @@ def recurse(subreddit, hot_list=[], after=''):
             headers={'User-agent': 'custom'},
             allow_redirects=False
             )
-        after = request.json()['data']['after']
-        if after:
-            posts = request.json()['data']['children']
-            for post in posts:
-                hot_list.append(post['data']['title'])
-            hot_list = recurse(subreddit, hot_list, after)
-            return hot_list
-        else:
-            return hot_list
+        if request.status_code == 200:
+            after = request.json()['data']['after']
+            if after:
+                posts = request.json()['data']['children']
+                for post in posts:
+                    hot_list.append(post['data']['title'])
+                hot_list = recurse(subreddit, hot_list, after)
+                return hot_list
+            else:
+                return hot_list
     return None
