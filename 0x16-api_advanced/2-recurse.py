@@ -6,9 +6,9 @@ import requests
 def recurse(subreddit, hot_list=[], pag=-1):
     """queries the Reddit API and returns a list of all hot titles
     """
-    if pag == -1:
+    if isinstance(subreddit, str):
         request = requests.get(
-            'https://www.reddit.com/r/{}/hot.json'.format(subreddit),
+            'https://www.reddit.com/r/{}/hot.json?show=all'.format(subreddit),
             headers={'User-agent': 'custom'},
             allow_redirects=False
             )
