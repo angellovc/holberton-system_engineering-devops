@@ -2,7 +2,6 @@
 """ top_ten functions module """
 import requests
 from sys import argv
-import json
 
 
 def top_ten(subreddit):
