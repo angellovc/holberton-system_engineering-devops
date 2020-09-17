@@ -11,7 +11,8 @@ def top_ten(subreddit):
     """
     request = requests.get(
         'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit),
-        headers={'User-agent': 'custom'}
+        headers={'User-agent': 'custom'},
+        allow_redirects=False
     )
     try:
         posts = request.json()['data']['children']
