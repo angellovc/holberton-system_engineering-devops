@@ -14,9 +14,9 @@ def top_ten(subreddit):
         headers={'User-agent': 'custom'},
         allow_redirects=False
     )
-    try:
+    if (request.status_code == 200):
         posts = request.json()['data']['children']
         for post in posts:
             print(post['data']['title'])
-    except:
-        print("None")
+    else:
+        print(None)
