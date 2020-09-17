@@ -17,6 +17,8 @@ def recurse(subreddit, hot_list=[]):
             recurse(posts, hot_list)
         else:
             return None
+    if subreddit is None:
+        return None
     try:
         pag = len(hot_list)
         hot_list.append(subreddit[pag]['data']['title'])
