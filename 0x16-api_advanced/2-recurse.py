@@ -8,7 +8,9 @@ def recurse(subreddit, hot_list=[], after=''):
     """
     if isinstance(subreddit, str):
         request = requests.get(
-            'https://www.reddit.com/r/{}/hot.json?after={}'.format(subreddit, after),
+            'https://www.reddit.com/r/{}/hot.json?after={}'.format(
+                subreddit,
+                after),
             headers={'User-agent': 'custom'},
             allow_redirects=False
             )
