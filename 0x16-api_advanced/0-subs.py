@@ -12,4 +12,7 @@ def number_of_subscribers(subreddit):
         'https://www.reddit.com/r/{}/about.json'.format(subreddit),
         headers={'User-agent': 'custom'}
     )
-    return request.json()['data']['subscribers']
+    try:
+        return request.json()['data']['subscribers']
+    except:
+        return 0
