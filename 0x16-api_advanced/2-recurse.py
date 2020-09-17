@@ -8,17 +8,16 @@ def recurse(subreddit, hot_list=[], pag=-1):
     """
     if pag == -1:
         request = requests.get(
-            'https://www.reddit.com/r/{}/hot.json?show=all'.format(subreddit),
+            'https://www.reddit.com/r/{}/hot.json'.format(subreddit),
             headers={'User-agent': 'custom'},
             allow_redirects=False
             )
-        if (request is None or request.status_code == 200):
+        if (request.status_code == 200):
             posts = request.json()['data']['children']
             recurse(posts, hot_list, pag + 1)
         else:
             return None
     try:
-        subreddit[pag]
         hot_list.append(subreddit[pag]['data']['title'])
         hot_list = recurse(subreddit, hot_list, pag + 1)
     except:
