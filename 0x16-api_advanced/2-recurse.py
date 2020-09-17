@@ -15,8 +15,6 @@ def recurse(subreddit, hot_list=[], after=''):
             allow_redirects=False
             )
         after = request.json()['data']['after']
-        print(after)
-        print(len(hot_list))
         if after:
             posts = request.json()['data']['children']
             for post in posts:
