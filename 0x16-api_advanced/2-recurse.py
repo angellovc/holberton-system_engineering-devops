@@ -12,7 +12,7 @@ def recurse(subreddit, hot_list=[], pag=-1):
             headers={'User-agent': 'custom'},
             allow_redirects=False
             )
-        if (request.status_code == 200):
+        if (request is None or request.status_code == 200):
             posts = request.json()['data']['children']
             recurse(posts, hot_list, pag + 1)
         else:
